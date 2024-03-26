@@ -1,0 +1,139 @@
+<!-- Jay Siya Ram -->
+<!-- Har Har Mahadev -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: silver;
+        }
+
+        .btn {
+            border: none;
+            background-color: transparent;
+            color: white;
+            font-size: 45px;
+        }
+
+        .container {
+            border: 1px solid white;
+            border-radius: 20px;
+            text-align: center;
+            background-color: lightslategrey;
+        }
+
+        #emoji {
+            font-size: 55px;
+            margin: -5px 15px;
+            border-bottom: 1px solid white;
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            color: white;
+            font-size: 25px;
+            font-style: italic;
+            font-weight: normal;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h3>Star Rating</h3>
+    <h1 id="emoji">&#128512</h1>
+    <div>
+        <button class="btn">&#9733</button>
+        <button class="btn">&#9733</button>
+        <button class="btn">&#9733</button>
+        <button class="btn">&#9733</button>
+        <button class="btn">&#9733</button>      
+        </div>
+    </div>
+    <script>
+        let star = document.querySelectorAll(".btn")
+        star.forEach((star1,index) => {
+            star1.addEventListener("click", (x) => {
+                for (j = 0; j < star.length; j++) {
+                    star[j].style.color = "white"
+                }
+                for(i=0;i<=index;i++){
+                    star[i].style.color="Gold"
+                }
+                if(index==0){
+                    emoji.innerHTML="&#128532"
+                }
+                if(index==1){
+                    emoji.innerHTML="&#128517"
+                }
+                if(index==2){
+                    emoji.innerHTML="&#128515"
+                }
+                if(index==3){
+                    emoji.innerHTML="&#128525"
+                }
+                if(index==4){
+                    emoji.innerHTML="&#128511"
+                }
+            })
+        })
+        
+        
+        
+        
+        
+        
+        
+        </script>
+           <!-- <div class="container">
+            <h3>Star Rating</h3>
+            <h1 id="emoji">&#128512</h1>
+            <div>
+                <button class="btn" onclick="rate(0)">&#9733</button>
+                <button class="btn" onclick="rate(1)">&#9733</button>
+                <button class="btn" onclick="rate(2)">&#9733</button>
+                <button class="btn" onclick="rate(3)">&#9733</button>
+                <button class="btn" onclick="rate(4)">&#9733</button>
+            </div>
+            </div> -->
+        <!-- <script>
+           let star = document.getElementsByClassName("btn")
+           let emoji = document.getElementById("emoji")
+           let next = 0
+           function rate(x) {
+               for (j = 0; j < star.length; j++) {
+                   star[j].style.color = "white"
+               }
+               for(i=0;i<=x;i++){
+                   star[i].style.color="Gold"
+               }
+               if(x==0){
+                   emoji.innerHTML="&#128532"
+               }
+               if(x==1){
+                   emoji.innerHTML="&#128517"
+               }
+               if(x==2){
+                   emoji.innerHTML="&#128515"
+               }
+               if(x==3){
+                   emoji.innerHTML="&#128525"
+               }
+               if(x==4){
+                   emoji.innerHTML="&#128511"
+               }
+           }
+         </script> -->
+</body>
+
+</html>
